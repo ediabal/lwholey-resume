@@ -25,7 +25,7 @@ const AboutSection = ({ firstName, lastName, address, email, socialLinks }) => {
           real taste of building web applications for the Naval Surface Warfare
           Center, Dahlgren Division (NSWCDD), a real mouthful, I know. After
           finishing what looked liked my last web application contract there I
-          decided it was time to make the move to the public sector.
+          decided it was time to make the move to the private sector.
         </p>
 
         <p>
