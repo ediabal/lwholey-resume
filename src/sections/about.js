@@ -33,9 +33,8 @@ const AboutSection = ({ firstName, lastName, address, email, socialLinks }) => {
           facing portal for their security platform and it was so cool! FireEye
           has been extremely beneficial to my personal development and growth as
           they have facilitied my interests and continued learning. They've also
-          given me the freedom to work on remotely on many different projects
-          and teams thus allowing me to learn many new technologies along the
-          way.
+          given me the freedom to work remotely on many different projects and
+          teams thus allowing me to learn many new technologies along the way.
         </p>
 
         <p>
