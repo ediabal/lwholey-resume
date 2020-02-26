@@ -26,20 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-88eb3c5a4d2cb275933c.js"
+    "url": "webpack-runtime-1174f5609723af4bbf56.js"
   },
   {
     "url": "commons-19c02c43d3839b9ff724.js"
   },
   {
-    "url": "app-71f5a2491f428fd647f9.js"
+    "url": "app-ae8615a38a7ee591a61b.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-3b532cfc3168f6f6172d.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "30253cd98222d1c6a01a285001abf590"
+    "revision": "e9ffcdfbac526ee079fd7e745a17400e"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -47,11 +47,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "0b1c8e514b706c724191b23639d4b27d"
+    "revision": "fdc1db5af8db97225fef803be9174ce9"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "b83bcafcc845efdfe0e3e65f6626d1c2"
+    "revision": "29fd73611e4e6aca752e588bd1de9d44"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -70,12 +70,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/wholey-resume`), ``)
+  pathname = pathname.replace(new RegExp(`^/lwholey-resume`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/wholey-resume/app-71f5a2491f428fd647f9.js`))) {
+  if (!resources || !(await caches.match(`/lwholey-resume/app-ae8615a38a7ee591a61b.js`))) {
     return await fetch(event.request)
   }
 
@@ -88,7 +88,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/wholey-resume/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/lwholey-resume/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
