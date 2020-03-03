@@ -14,13 +14,16 @@ class Scroll extends React.Component {
     timeout: PropTypes.number,
     children: PropTypes.node.isRequired,
   };
+
   constructor() {
     super();
     this.handleClick = this.handleClick.bind(this);
   }
+
   componentDidMount() {
     smoothscroll.polyfill();
   }
+
   handleClick(e) {
     e.preventDefault();
     let elem = 0;
@@ -43,6 +46,7 @@ class Scroll extends React.Component {
       ? this.scrollTo(elem, offset, timeout)
       : console.log(`Element not found: ${element}`); // eslint-disable-line
   }
+
   scrollTo(element, offSet = 0, timeout = null) {
     const elemPos = element
       ? element.getBoundingClientRect().top + window.pageYOffset
@@ -55,6 +59,7 @@ class Scroll extends React.Component {
       window.scroll({ top: elemPos + offSet, left: 0, behavior: 'smooth' });
     }
   }
+
   render() {
     return (
       <Element>
