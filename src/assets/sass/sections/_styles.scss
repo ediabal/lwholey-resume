@@ -21,7 +21,7 @@ section.resume-section {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $page-min-width) {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;

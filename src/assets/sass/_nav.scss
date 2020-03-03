@@ -16,7 +16,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $page-min-width) {
   #sideNav {
     display: flex;
     flex-direction: column;
