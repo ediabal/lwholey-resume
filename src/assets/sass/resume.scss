@@ -1,9 +1,10 @@
 @import './vendor/bootstrap/bootstrap.min.css';
 
-@import 'variables.scss';
-@import 'mixins.scss';
-@import 'global.scss';
-@import 'nav.scss';
+@import './variables';
+@import './mixins';
+@import './global';
+@import './components/styles';
+@import './pages/styles';
 @import './sections/styles';
 
 @import './overrides/bootstrap-overrides';

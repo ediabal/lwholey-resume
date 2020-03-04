@@ -14,22 +14,22 @@ import InterestsSection from '../sections/interests';
 const IndexPage = () => (
   <Layout>
     <Navbar />
-    <div className="container-fluid p-0">
+    <div className="index-page">
       <AboutSection {...config} />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <ExperienceSection />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <SkillsSection />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <EducationSection />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <InterestsSection />
     </div>

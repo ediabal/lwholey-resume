@@ -1,0 +1,14 @@
+.e-404-page {
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__section {
+    @include resume-section;
+
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+  }
+}

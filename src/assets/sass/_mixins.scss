@@ -1,5 +1,49 @@
 // Mixins
 
+// Responsive Attributes
+
+@mixin responsive-padding {
+  padding: 1rem;
+
+  @media (min-width: 992px) {
+    padding: 3rem;
+  }
+}
+
+@mixin responsive-flex-direction {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+// Sections
+
+@mixin resume-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+
+  .resume-date {
+    min-width: none;
+  }
+
+  @media (min-width: 768px) {
+    min-height: 100vh;
+
+    .resume-date {
+      min-width: 18rem;
+    }
+  }
+
+  @media (min-width: $page-min-width) {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
 // Fonts
 
 @mixin body-font {

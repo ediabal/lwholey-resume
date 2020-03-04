@@ -4,13 +4,12 @@ import Layout from '../components/Layout';
 
 const IndexPage = () => (
   <Layout>
-    <div className="container-fluid p-0">
-      <section
-        className="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="about"
-      >
-        <header className="major">
+    <div className="e-404-page">
+      <section id="about" className="e-404-page__section">
+        <header>
           <h2>
+            404
+            <br />
             Page not found
             <br />
             Not a valid URL

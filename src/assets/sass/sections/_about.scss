@@ -1,0 +1,53 @@
+.about-section {
+  @include resume-section;
+  @include responsive-padding;
+
+  display: flex;
+  align-items: center;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__header {
+    margin-bottom: 0;
+
+    &--primary {
+      color: $primary;
+    }
+  }
+
+  &__subheader {
+    @include heading-font;
+
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .social-icons {
+    margin-top: 3rem;
+
+    a {
+      display: inline-block;
+      height: 3.5rem;
+      width: 3.5rem;
+      background-color: $gray-700;
+      color: $white !important;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 3.5rem;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

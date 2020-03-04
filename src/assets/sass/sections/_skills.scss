@@ -1,0 +1,56 @@
+.skills-section {
+  @include resume-section;
+  @include responsive-padding;
+
+  display: flex;
+  align-items: center;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+
+  &__subheader {
+    @include heading-font;
+
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  &__icons {
+    padding-left: 0;
+    list-style: none;
+    font-size: 3rem;
+
+    .skill-icon {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    .skill-list-item {
+      .fa {
+        color: $primary;
+      }
+    }
+  }
+}

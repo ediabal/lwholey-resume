@@ -1,28 +1,27 @@
 import React from 'react';
 
+import { toKebabCase } from '../utils';
+
 const EducationSectionItem = ({ title, degree, gpa, dates, url }) => (
-  <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-    <div className="resume-content">
-      <h3 className="mb-0">
+  <div key={toKebabCase(title)} className="education-section-item">
+    <div className="education-section-item__content">
+      <h3 className="education-section-item__header">
         <a key={url} href={url} target="_blank">
           {title}
         </a>
       </h3>
-      <div className="subheading mb-3">
+      <div className="education-section-item__subheader">
         {degree} · {gpa} GPA
       </div>
     </div>
-    <div className="resume-date text-md-right">{dates}</div>
+    <div className="education-section-item__dates resume-date">{dates}</div>
   </div>
 );
 
 const EducationSection = () => (
-  <section
-    className="resume-section p-3 p-lg-5 d-flex align-items-center"
-    id="education"
-  >
-    <div className="w-100">
-      <h2 className="mb-5">Education</h2>
+  <section id="education" className="education-section">
+    <div className="education-section__content">
+      <h2 className="education-section__header">Education</h2>
 
       <EducationSectionItem
         title="University of Mary Washington"
