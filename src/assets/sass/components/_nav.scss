@@ -16,7 +16,7 @@
   }
 }
 
-@media (min-width: $page-min-width) {
+@media (min-width: $lg-page-min-width) {
   #sideNav {
     display: flex;
     flex-direction: column;

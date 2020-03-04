@@ -1,8 +1,5 @@
 .index-page {
-  width: 100%;
-  padding: 0;
-  margin-right: auto;
-  margin-left: auto;
+  @include page-layout;
 
   &__hr {
     margin: 0;

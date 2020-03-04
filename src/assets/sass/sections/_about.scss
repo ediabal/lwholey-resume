@@ -1,13 +1,5 @@
 .about-section {
-  @include resume-section;
-  @include responsive-padding;
-
-  display: flex;
-  align-items: center;
-
-  &__content {
-    width: 100%;
-  }
+  @include resume-section-layout;
 
   &__header {
     margin-bottom: 0;
@@ -18,11 +10,6 @@
   }
 
   &__subheader {
-    @include heading-font;
-
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.5rem;
     margin-bottom: 3rem;
   }
 

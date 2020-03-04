@@ -2,13 +2,13 @@ import React from 'react';
 import { chunk } from 'lodash';
 
 const SkillIcon = ({ skill }) => (
-  <li key={`skill-icon-${skill}`} className="skill-icon">
+  <li className="skill-icon">
     <i className={`fab fa-${skill}`}></i>
   </li>
 );
 
 const SkillListItem = ({ skill }) => (
-  <li key={`skill-${skill}`} className="skill-list-item">
+  <li className="skill-list-item">
     <i className="fa fa-check fa-li"></i> {skill}
   </li>
 );
@@ -49,16 +49,16 @@ const SkillsSection = () => {
         </div>
 
         <ul className="skills-section__icons">
-          {skillIcons.map(({ icon }) => (
-            <SkillIcon skill={icon} />
+          {skillIcons.map(({ icon }, i) => (
+            <SkillIcon key={`skill-icon-${i}`} skill={icon} />
           ))}
         </ul>
 
         <div className="skills-section__skills">
-          {chunk(skills, 5).map(chunk => (
-            <ul className="skills-section__skills__list fa-ul">
-              {chunk.map(({ name }) => (
-                <SkillListItem skill={name} />
+          {chunk(skills, 5).map((chunk, i) => (
+            <ul key={`sl-${i}`} className="skills-section__skills__list fa-ul">
+              {chunk.map(({ name }, j) => (
+                <SkillListItem key={`sl-${i}-${j}`} skill={name} />
               ))}
             </ul>
           ))}

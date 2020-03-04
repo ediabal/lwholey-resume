@@ -6,7 +6,7 @@ const ExperienceSectionItemDetailsList = ({ title, details = [] }) => (
     <h4>Details:</h4>
     <ul>
       {details.map((detail, i) => (
-        <li key={`${toKebabCase(title)}-detail-${i}`}>{detail}</li>
+        <li key={`${toKebabCase(title)}-d-${i}`}>{detail}</li>
       ))}
     </ul>
   </div>
@@ -95,7 +95,7 @@ const ExperienceSection = () => {
         <h2 className="experience-section__header">Experience</h2>
 
         {jobs.map((job, i) => (
-          <ExperienceSectionItem key={`job-${i}`} {...job} />
+          <ExperienceSectionItem key={`j-${i}`} {...job} />
         ))}
       </div>
     </section>
