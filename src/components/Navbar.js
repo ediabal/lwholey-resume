@@ -85,6 +85,9 @@ export class Sidebar extends Component {
                 </li>
               );
             })}
+            <a className="nav-link" href={`mailto:${config.email}`}>
+              Contact
+            </a>
           </Scrollspy>
         </div>
       </nav>

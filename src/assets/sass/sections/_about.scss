@@ -2,6 +2,7 @@
   @include resume-section-layout;
 
   &__header {
+    color: $secondary;
     margin-bottom: 0;
 
     &--primary {
