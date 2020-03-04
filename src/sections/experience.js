@@ -4,9 +4,14 @@ import { toKebabCase } from '../utils';
 const ExperienceSectionItemDetailsList = ({ title, details = [] }) => (
   <div className="experience-section-item-details-list">
     <h4>Details:</h4>
-    <ul>
+    <ul className="experience-section-item-details-list__list fa-ul">
       {details.map((detail, i) => (
-        <li key={`${toKebabCase(title)}-d-${i}`}>{detail}</li>
+        <li
+          key={`${toKebabCase(title)}-d-${i}`}
+          className="experience-section-item-details-list__list__item"
+        >
+          <i className="fa fa-check fa-li"></i> {detail}
+        </li>
       ))}
     </ul>
   </div>
