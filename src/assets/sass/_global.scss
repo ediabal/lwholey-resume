@@ -5,11 +5,9 @@ body {
 
   padding-top: 54px;
   color: $gray-600;
-}
 
-@media (min-width: $lg-page-min-width) {
-  // move the page body content out from under the left nav when on larger screens.
-  body {
+  @media (min-width: $lg-page-min-width) {
+    // move the page body content out from under the left nav when on larger screens.
     padding-top: 0;
     padding-left: $sidebar-base-width;
   }

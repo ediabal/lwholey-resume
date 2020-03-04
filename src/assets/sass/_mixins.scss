@@ -1,24 +1,5 @@
 // Mixins
 
-// Responsive Attributes
-
-@mixin responsive-padding {
-  padding: 1rem;
-
-  @media (min-width: $md-page-min-width) {
-    padding: 3rem;
-  }
-}
-
-@mixin responsive-flex-direction {
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: $md-page-min-width) {
-    flex-direction: row;
-  }
-}
-
 // Page & Sections
 
 @mixin page-layout {
@@ -30,10 +11,14 @@
 
 @mixin resume-section-layout {
   @include resume-section;
-  @include responsive-padding;
 
   display: flex;
   align-items: center;
+  padding: 1rem;
+
+  @media (min-width: $md-page-min-width) {
+    padding: 3rem;
+  }
 
   &__content {
     width: 100%;
@@ -72,10 +57,14 @@
 }
 
 @mixin resume-section-item {
-  @include responsive-flex-direction;
-
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 3rem;
+
+  @media (min-width: $md-page-min-width) {
+    flex-direction: row;
+  }
 
   &__header {
     margin-bottom: 0;
