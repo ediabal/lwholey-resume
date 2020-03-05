@@ -2,16 +2,13 @@ import React from 'react';
 
 const AboutSection = ({ firstName, lastName, address, email, socialLinks }) => {
   return (
-    <section
-      className="resume-section p-3 p-lg-5 d-flex align-items-center"
-      id="about"
-    >
-      <div className="w-100">
-        <h1 className="mb-0">
+    <section id="about" className="about-section">
+      <div className="about-section__content">
+        <h1 className="about-section__header">
           {firstName}
-          <span className="text-primary">{lastName}</span>
+          <span className="about-section__header--primary">{lastName}</span>
         </h1>
-        <div className="subheading mb-5">
+        <div className="about-section__subheader">
           {address} · <a href={`mailto:${email}`}>{email}</a>
         </div>
 
@@ -45,7 +42,7 @@ const AboutSection = ({ firstName, lastName, address, email, socialLinks }) => {
           technologies and frameworks.
         </p>
 
-        <p className="mb-5">Welcome and thank you for visiting this page!</p>
+        <p>Welcome and thank you for visiting this page!</p>
 
         <div className="social-icons">
           {socialLinks.map(social => {

@@ -3,7 +3,7 @@ import React from 'react';
 import config from '../../config';
 
 import Layout from '../components/Layout';
-import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Navbar';
 
 import AboutSection from '../sections/about';
 import ExperienceSection from '../sections/experience';
@@ -13,23 +13,23 @@ import InterestsSection from '../sections/interests';
 
 const IndexPage = () => (
   <Layout>
-    <Sidebar />
-    <div className="container-fluid p-0">
+    <Navbar />
+    <div className="index-page">
       <AboutSection {...config} />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <ExperienceSection />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <SkillsSection />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <EducationSection />
 
-      <hr className="m-0" />
+      <hr className="index-page__hr" />
 
       <InterestsSection />
     </div>

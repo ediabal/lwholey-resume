@@ -1,0 +1,15 @@
+.experience-section {
+  @include resume-section-layout;
+}
+
+.experience-section-item {
+  @include resume-section-item;
+}
+
+.experience-section-item-details-list {
+  &__list__item {
+    .fa {
+      color: $green;
+    }
+  }
+}

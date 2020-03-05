@@ -1,0 +1,7 @@
+.education-section {
+  @include resume-section-layout;
+}
+
+.education-section-item {
+  @include resume-section-item;
+}

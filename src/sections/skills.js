@@ -2,14 +2,14 @@ import React from 'react';
 import { chunk } from 'lodash';
 
 const SkillIcon = ({ skill }) => (
-  <li className="list-inline-item">
+  <li className="skill-icon">
     <i className={`fab fa-${skill}`}></i>
   </li>
 );
 
 const SkillListItem = ({ skill }) => (
-  <li>
-    <i className="fa fa-check fa-li text-primary"></i> {skill}
+  <li className="skill-list-item">
+    <i className="fa fa-check fa-li"></i> {skill}
   </li>
 );
 
@@ -40,28 +40,25 @@ const SkillsSection = () => {
   const skillIcons = skills.filter(({ icon = null }) => icon != null);
 
   return (
-    <section
-      className="resume-section p-3 p-lg-5 d-flex align-items-center"
-      id="skills"
-    >
-      <div className="w-100">
-        <h2 className="mb-5">Skills</h2>
+    <section id="skills" className="skills-section">
+      <div className="skills-section__content">
+        <h2 className="skills-section__header">Skills</h2>
 
-        <div className="subheading mb-3">
+        <div className="skills-section__subheader">
           Programming Languages, Tools &amp; Proficiencies
         </div>
 
-        <ul className="list-inline dev-icons">
-          {skillIcons.map(({ icon }) => (
-            <SkillIcon skill={icon} />
+        <ul className="skills-section__icons">
+          {skillIcons.map(({ icon }, i) => (
+            <SkillIcon key={`skill-icon-${i}`} skill={icon} />
           ))}
         </ul>
 
-        <div className="dev-skills">
-          {chunk(skills, 5).map(chunk => (
-            <ul className=" fa-ul mb-0">
-              {chunk.map(({ name }) => (
-                <SkillListItem skill={name} />
+        <div className="skills-section__skills">
+          {chunk(skills, 5).map((chunk, i) => (
+            <ul key={`sl-${i}`} className="skills-section__skills__list fa-ul">
+              {chunk.map(({ name }, j) => (
+                <SkillListItem key={`sl-${i}-${j}`} skill={name} />
               ))}
             </ul>
           ))}
