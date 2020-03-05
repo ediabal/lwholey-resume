@@ -1,4 +1,4 @@
-#sideNav {
+#side-nav {
   .nav-link {
     font-weight: 800;
     letter-spacing: 0.05rem;
@@ -14,10 +14,8 @@
       outline-color: lighten($primary, 15%);
     }
   }
-}
 
-@media (min-width: $lg-page-min-width) {
-  #sideNav {
+  @media (min-width: $lg-page-min-width) {
     display: flex;
     flex-direction: column;
     position: fixed;
