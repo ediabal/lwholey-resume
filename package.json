@@ -27,8 +27,8 @@
   },
   "scripts": {
     "develop": "gatsby develop",
-    "build": "yarn clean && gatsby build",
-    "deploy": "yarn clean && gatsby build --prefix-paths && gh-pages -d public",
+    "build": "yarn clean && gatsby build --prefix-paths && cp CNAME public/.",
+    "deploy": "yarn build && gh-pages -d public",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write '**/*.js'",
