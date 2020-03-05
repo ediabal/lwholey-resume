@@ -1,11 +1,17 @@
 import React from 'react';
+import { toKebabCase } from '../utils';
 
-const ExperienceSectionItemDetailsList = ({ details = [] }) => (
-  <div className="details-list">
+const ExperienceSectionItemDetailsList = ({ title, details = [] }) => (
+  <div className="experience-section-item-details-list">
     <h4>Details:</h4>
-    <ul>
-      {details.map(detail => (
-        <li>{detail}</li>
+    <ul className="experience-section-item-details-list__list fa-ul">
+      {details.map((detail, i) => (
+        <li
+          key={`${toKebabCase(title)}-d-${i}`}
+          className="experience-section-item-details-list__list__item"
+        >
+          <i className="fa fa-check fa-li"></i> {detail}
+        </li>
       ))}
     </ul>
   </div>
@@ -19,18 +25,16 @@ const ExperienceSectionItem = ({
   dates,
 }) => {
   return (
-    <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-      <div className="resume-content">
-        <h3 className="mb-0">{title}</h3>
-        <div className="subheading mb-3">{subtitle}</div>
+    <div className="experience-section-item">
+      <div className="experience-section-item__content">
+        <h3 className="experience-section-item__header">{title}</h3>
+        <div className="experience-section-item__subheader">{subtitle}</div>
         <p>{content}</p>
         {details.length > 0 && (
-          <ExperienceSectionItemDetailsList details={details} />
+          <ExperienceSectionItemDetailsList title={title} details={details} />
         )}
       </div>
-      <div className="resume-date text-md-right">
-        <span className="text-primary">{dates}</span>
-      </div>
+      <div className="experience-section-item__dates resume-date">{dates}</div>
     </div>
   );
 };
@@ -91,15 +95,12 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section
-      className="resume-section p-3 p-lg-5 d-flex justify-content-center"
-      id="experience"
-    >
-      <div className="w-100">
-        <h2 className="mb-5">Experience</h2>
+    <section id="experience" className="experience-section">
+      <div className="experience-section__content">
+        <h2 className="experience-section__header">Experience</h2>
 
-        {jobs.map(job => (
-          <ExperienceSectionItem {...job} />
+        {jobs.map((job, i) => (
+          <ExperienceSectionItem key={`j-${i}`} {...job} />
         ))}
       </div>
     </section>

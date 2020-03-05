@@ -1,5 +1,90 @@
 // Mixins
 
+// Page & Sections
+
+@mixin page-layout {
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin resume-section-layout {
+  @include resume-section;
+
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  @media (min-width: $md-page-min-width) {
+    padding: 3rem;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+
+  &__subheader {
+    @include subheader;
+  }
+}
+
+@mixin resume-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+
+  .resume-date {
+    min-width: none;
+  }
+
+  @media (min-width: $md-page-min-width) {
+    min-height: 100vh;
+
+    .resume-date {
+      min-width: 18rem;
+    }
+  }
+
+  @media (min-width: $lg-page-min-width) {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@mixin resume-section-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  @media (min-width: $md-page-min-width) {
+    flex-direction: row;
+  }
+
+  &__header {
+    margin-bottom: 0;
+  }
+
+  &__subheader {
+    @include subheader;
+
+    margin-bottom: 1rem;
+  }
+
+  &__dates {
+    @media (min-width: $md-page-min-width) {
+      text-align: right;
+    }
+  }
+}
+
+// Fonts
+
 @mixin body-font {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -9,4 +94,14 @@
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+// Headers
+
+@mixin subheader {
+  @include heading-font;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
 }

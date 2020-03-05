@@ -1,0 +1,7 @@
+.index-page {
+  @include page-layout;
+
+  &__hr {
+    margin: 0;
+  }
+}

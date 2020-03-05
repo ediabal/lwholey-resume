@@ -1,0 +1,36 @@
+.skills-section {
+  @include resume-section-layout;
+
+  &__icons {
+    padding-left: 0;
+    list-style: none;
+    font-size: 3rem;
+
+    .skill-icon {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    .skill-list-item {
+      .fa {
+        color: $green;
+      }
+    }
+  }
+}

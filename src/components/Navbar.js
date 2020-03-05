@@ -36,8 +36,8 @@ export class Sidebar extends Component {
 
     return (
       <nav
+        id="side-nav"
         className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-        id="sideNav"
       >
         <a className="navbar-brand" href="#about">
           <span className="d-block d-lg-none">
@@ -85,6 +85,9 @@ export class Sidebar extends Component {
                 </li>
               );
             })}
+            <a className="nav-link" href={`mailto:${config.email}`}>
+              Contact
+            </a>
           </Scrollspy>
         </div>
       </nav>

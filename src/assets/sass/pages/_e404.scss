@@ -1,0 +1,11 @@
+.e-404-page {
+  @include page-layout;
+
+  &__section {
+    @include resume-section;
+
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+  }
+}
