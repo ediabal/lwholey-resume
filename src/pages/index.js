@@ -1,6 +1,15 @@
 import React from 'react';
 
-import config from '../../config';
+import {
+  firstName,
+  lastName,
+  address,
+  email,
+  socialLinks,
+  education,
+  experience,
+  skills,
+} from '../../json/json-bundle';
 
 import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
@@ -15,19 +24,25 @@ const IndexPage = () => (
   <Layout>
     <Navbar />
     <div className="index-page">
-      <AboutSection {...config} />
+      <AboutSection
+        firstName={firstName}
+        lastName={lastName}
+        address={address}
+        email={email}
+        socialLinks={socialLinks}
+      />
 
       <hr className="index-page__hr" />
 
-      <ExperienceSection />
+      <ExperienceSection experience={experience} />
 
       <hr className="index-page__hr" />
 
-      <SkillsSection />
+      <SkillsSection skills={skills} />
 
       <hr className="index-page__hr" />
 
-      <EducationSection />
+      <EducationSection education={education} />
 
       <hr className="index-page__hr" />
 
