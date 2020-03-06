@@ -6,7 +6,7 @@
     list-style: none;
     font-size: 3rem;
 
-    .skill-icon {
+    &__icon {
       display: inline-block;
 
       &:not(:last-child) {
@@ -19,15 +19,18 @@
     }
   }
 
-  &__skills {
-    display: flex;
-    flex-wrap: wrap;
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 0.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 
-    &__list {
-      margin-bottom: 0;
-    }
+    &__item {
+      align-self: center;
 
-    .skill-list-item {
       .fa {
         color: $green;
       }

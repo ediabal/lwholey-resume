@@ -1,15 +1,13 @@
 import React from 'react';
-
+import LinkPreview from '../components/LinkPreview';
 import { toKebabCase } from '../utils';
 
 const EducationSectionItem = ({ title, degree, gpa, dates, url }) => (
   <div key={toKebabCase(title)} className="education-section-item">
     <div className="education-section-item__content">
-      <h3 className="education-section-item__header">
-        <a key={url} href={url} target="_blank">
-          {title}
-        </a>
-      </h3>
+      <LinkPreview url={url} placement="top-start">
+        <h3 className="education-section-item__header">{title}</h3>
+      </LinkPreview>
       <div className="education-section-item__subheader">
         {degree} · {gpa} GPA
       </div>
