@@ -1,0 +1,19 @@
+{
+  "socialLinks": [
+    {
+      "icon": "fa-github",
+      "name": "Github",
+      "url": "https://github.com/ediabal"
+    },
+    {
+      "icon": "fa-linkedin-in",
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/lwholey/"
+    },
+    {
+      "icon": "fa-twitter",
+      "name": "Twitter",
+      "url": "https://twitter.com/loganwholey"
+    }
+  ]
+}

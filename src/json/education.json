@@ -1,0 +1,18 @@
+{
+  "education": [
+    {
+      "title": "University of Mary Washington",
+      "degree": "Bachelor of Science in Computer Science",
+      "gpa": "3.68",
+      "dates": "2011 - 2014",
+      "url": "https://www.umw.edu/"
+    },
+    {
+      "title": "Germanna Community College",
+      "degree": "Associate of Arts and Sciences",
+      "gpa": "3.74",
+      "dates": "2009 - 2011",
+      "url": "https://www.germanna.edu/"
+    }
+  ]
+}
