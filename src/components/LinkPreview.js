@@ -18,7 +18,12 @@ class LinkPreview extends Component {
         interactive
         {...rest}
       >
-        <a className="link-preview" href={url} target="_blank">
+        <a
+          className="link-preview"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {children}
         </a>
       </Tippy>

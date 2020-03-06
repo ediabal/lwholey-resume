@@ -1,3 +1,6 @@
+/* eslint jsx-a11y/click-events-have-key-events: 0 */
+/* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
+
 import React, { Component } from 'react';
 import Scrollspy from 'react-scrollspy';
 import Scroll from './Scroll';
@@ -6,10 +9,6 @@ import avatar from '../assets/images/avatar.png';
 import config from '../../config';
 
 export class Sidebar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = { collapsed: true };
 
   tabs = [
