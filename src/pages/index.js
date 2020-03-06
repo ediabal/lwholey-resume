@@ -5,11 +5,13 @@ import {
   lastName,
   address,
   email,
+  aboutParagraphs,
   socialLinks,
   education,
   experience,
   skills,
-} from '../../json/json-bundle';
+  interestsParagraphs,
+} from '../json/json-bundle';
 
 import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
@@ -30,6 +32,7 @@ const IndexPage = () => (
         address={address}
         email={email}
         socialLinks={socialLinks}
+        paragraphs={aboutParagraphs}
       />
 
       <hr className="index-page__hr" />
@@ -46,7 +49,7 @@ const IndexPage = () => (
 
       <hr className="index-page__hr" />
 
-      <InterestsSection />
+      <InterestsSection paragraphs={interestsParagraphs} />
     </div>
   </Layout>
 );

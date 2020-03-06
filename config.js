@@ -1,4 +1,4 @@
-const myData = require('./json/my-data.json');
+const myData = require('./src/json/my-data.json');
 
 module.exports = {
   siteTitle: "Logan Wholey's Resume", // <title>
