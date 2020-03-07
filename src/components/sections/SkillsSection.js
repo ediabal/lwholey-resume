@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkPreview from '../components/LinkPreview';
+import LinkPreview from '../LinkPreview';
 
 const SkillIcon = ({ skill, link }) => (
   <li className="skills-section__icons__icon">

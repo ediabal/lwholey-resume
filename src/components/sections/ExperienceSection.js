@@ -1,5 +1,5 @@
 import React from 'react';
-import { toKebabCase } from '../utils';
+import { toKebabCase } from '../../utils';
 
 const ExperienceSectionItemDetailsList = ({ title, details = [] }) => (
   <div className="experience-section-item-details-list">

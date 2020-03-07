@@ -1,17 +1,22 @@
 {
   "socialLinks": [
     {
-      "icon": "fa-github",
+      "icon": "fas fa-envelope",
+      "name": "Email",
+      "url": "mailto:logan.wholey@gmail.com"
+    },
+    {
+      "icon": "fab fa-github",
       "name": "Github",
       "url": "https://github.com/ediabal"
     },
     {
-      "icon": "fa-linkedin-in",
+      "icon": "fab fa-linkedin-in",
       "name": "Linkedin",
       "url": "https://www.linkedin.com/in/lwholey/"
     },
     {
-      "icon": "fa-twitter",
+      "icon": "fab fa-twitter",
       "name": "Twitter",
       "url": "https://twitter.com/loganwholey"
     }

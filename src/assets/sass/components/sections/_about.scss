@@ -12,6 +12,19 @@
 
   &__subheader {
     margin-bottom: 3rem;
+
+    &--first {
+      display: inline-block;
+      color: $primary;
+      font-style: oblique;
+      padding-right: 0.5rem;
+    }
+
+    &--second {
+      display: inline-block;
+      font-size: 1.2rem;
+      padding-left: 0.5rem;
+    }
   }
 
   .social-icons {

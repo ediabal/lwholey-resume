@@ -22,11 +22,19 @@
   &__list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
     grid-gap: 0.5rem;
     align-items: center;
     margin: 0;
     padding: 0;
+
+    @media (min-width: $sm-page-min-width) {
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @media (min-width: $md-page-min-width) {
+      grid-template-columns: repeat(4, auto);
+    }
 
     &__item {
       align-self: center;

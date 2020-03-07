@@ -1,8 +1,15 @@
 import React from 'react';
-
+import Layout from '../components/Layout';
+import Navbar from '../components/Navbar';
+import AboutSection from '../components/sections/AboutSection';
+import ExperienceSection from '../components/sections/ExperienceSection';
+import SkillsSection from '../components/sections/SkillsSection';
+import EducationSection from '../components/sections/EductationSection';
+import InterestsSection from '../components/sections/InterestsSection';
 import {
   firstName,
   lastName,
+  title,
   address,
   email,
   aboutParagraphs,
@@ -13,15 +20,6 @@ import {
   interestsParagraphs,
 } from '../json/json-bundle';
 
-import Layout from '../components/Layout';
-import Navbar from '../components/Navbar';
-
-import AboutSection from '../sections/about';
-import ExperienceSection from '../sections/experience';
-import SkillsSection from '../sections/skills';
-import EducationSection from '../sections/eductation';
-import InterestsSection from '../sections/interests';
-
 const IndexPage = () => (
   <Layout>
     <Navbar />
@@ -29,6 +27,7 @@ const IndexPage = () => (
       <AboutSection
         firstName={firstName}
         lastName={lastName}
+        title={title}
         address={address}
         email={email}
         socialLinks={socialLinks}

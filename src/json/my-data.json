@@ -1,6 +1,8 @@
 {
+  "name": "Logan Wholey",
   "firstName": "Logan",
   "lastName": "Wholey",
   "email": "logan.wholey@gmail.com",
-  "address": "Seattle, WA"
+  "address": "Seattle, WA",
+  "title": "Senior Software Engineer & Web Developer"
 }

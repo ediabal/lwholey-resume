@@ -1,6 +1,6 @@
 import React from 'react';
-import LinkPreview from '../components/LinkPreview';
-import { toKebabCase } from '../utils';
+import LinkPreview from '../LinkPreview';
+import { toKebabCase } from '../../utils';
 
 const EducationSectionItem = ({ title, degree, gpa, dates, url }) => (
   <div className="education-section-item">

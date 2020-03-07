@@ -7,7 +7,7 @@ import '../assets/sass/styles.scss';
 
 class Layout extends Component {
   render() {
-    const { children } = this.props;
+    const { children, isPDF = false } = this.props;
     return (
       <StaticQuery
         query={graphql`
@@ -30,7 +30,7 @@ class Layout extends Component {
             >
               <html lang="en" />
             </Helmet>
-            <div className={'main-body'}>{children}</div>
+            <div className={isPDF ? 'pdf-body' : 'main-body'}>{children}</div>
           </>
         )}
       />

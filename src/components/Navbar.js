@@ -6,7 +6,7 @@ import Scrollspy from 'react-scrollspy';
 import Scroll from './Scroll';
 
 import avatar from '../assets/images/avatar.png';
-import config from '../../config';
+import { name, socialLinks } from '../json/json-bundle';
 
 export class Sidebar extends Component {
   state = { collapsed: true };
@@ -39,9 +39,7 @@ export class Sidebar extends Component {
         className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       >
         <a className="navbar-brand" href="#about">
-          <span className="d-block d-lg-none">
-            {config.firstName} {config.lastName}
-          </span>
+          <span className="d-block d-lg-none">{name}</span>
           <span className="d-none d-lg-block">
             <img
               className="img-fluid img-profile rounded-circle mx-auto mb-2"
@@ -84,9 +82,22 @@ export class Sidebar extends Component {
                 </li>
               );
             })}
-            <a className="nav-link" href={`mailto:${config.email}`}>
-              Contact
-            </a>
+
+            <div className="social-icons">
+              {socialLinks.map(social => {
+                const { icon, url } = social;
+                return (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className={icon}></i>
+                  </a>
+                );
+              })}
+            </div>
           </Scrollspy>
         </div>
       </nav>
