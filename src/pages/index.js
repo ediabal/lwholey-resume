@@ -11,7 +11,6 @@ import {
   lastName,
   title,
   address,
-  email,
   aboutParagraphs,
   socialLinks,
   education,
@@ -29,7 +28,6 @@ const IndexPage = () => (
         lastName={lastName}
         title={title}
         address={address}
-        email={email}
         socialLinks={socialLinks}
         paragraphs={aboutParagraphs}
       />

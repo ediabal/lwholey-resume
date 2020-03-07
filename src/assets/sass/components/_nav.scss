@@ -1,4 +1,6 @@
 #side-nav {
+  text-align: center;
+
   .nav-link {
     font-weight: 800;
     letter-spacing: 0.05rem;
@@ -15,37 +17,10 @@
     }
   }
 
-  .social-icons {
-    margin: 1.5rem 0;
-    text-align: center;
-
-    a {
-      display: inline-block;
-      height: 2rem;
-      width: 2rem;
-      background-color: fade-out($white, 0.8);
-      color: $white !important;
-      border-radius: 100%;
-      text-align: center;
-      font-size: 1rem;
-      line-height: 2rem;
-      margin-right: 1rem;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:hover {
-        background-color: fade-out($white, 0.6);
-      }
-    }
-  }
-
   @media (min-width: $lg-page-min-width) {
     display: flex;
     flex-direction: column;
     position: fixed;
-    text-align: center;
     top: 0;
     left: 0;
     width: $sidebar-base-width;

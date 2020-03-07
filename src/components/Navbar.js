@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import Scrollspy from 'react-scrollspy';
 import Scroll from './Scroll';
+import SocialLinks from './SocialLinks';
 
 import avatar from '../assets/images/avatar.png';
 import { name, socialLinks } from '../json/json-bundle';
@@ -83,21 +84,7 @@ export class Sidebar extends Component {
               );
             })}
 
-            <div className="social-icons">
-              {socialLinks.map(social => {
-                const { icon, url } = social;
-                return (
-                  <a
-                    key={url}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className={icon}></i>
-                  </a>
-                );
-              })}
-            </div>
+            <SocialLinks className="social-links--nav" links={socialLinks} />
           </Scrollspy>
         </div>
       </nav>

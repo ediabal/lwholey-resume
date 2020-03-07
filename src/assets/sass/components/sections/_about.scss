@@ -26,29 +26,4 @@
       padding-left: 0.5rem;
     }
   }
-
-  .social-icons {
-    margin-top: 3rem;
-
-    a {
-      display: inline-block;
-      height: 3.5rem;
-      width: 3.5rem;
-      background-color: $gray-700;
-      color: $white !important;
-      border-radius: 100%;
-      text-align: center;
-      font-size: 1.5rem;
-      line-height: 3.5rem;
-      margin-right: 1rem;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &:hover {
-        background-color: $primary;
-      }
-    }
-  }
 }

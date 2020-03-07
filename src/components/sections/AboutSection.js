@@ -1,11 +1,11 @@
 import React from 'react';
+import SocialLinks from '../SocialLinks';
 
 const AboutSection = ({
   firstName,
   lastName,
   title,
   address,
-  email,
   socialLinks = [],
   paragraphs = [],
 }) => {
@@ -25,16 +25,7 @@ const AboutSection = ({
           <p key={`clp-${i}`}>{paragraph}</p>
         ))}
 
-        <div className="social-icons">
-          {socialLinks.map(social => {
-            const { icon, url } = social;
-            return (
-              <a key={url} href={url} target="_blank" rel="noopener noreferrer">
-                <i className={icon}></i>
-              </a>
-            );
-          })}
-        </div>
+        <SocialLinks links={socialLinks} />
       </div>
     </section>
   );
