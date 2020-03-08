@@ -2,40 +2,43 @@ import React from 'react';
 import {
   PDFViewer,
   Page,
-  Text,
   View,
   Document,
   StyleSheet,
 } from '@react-pdf/renderer';
 import Layout from '../components/Layout';
 import {
-  firstName,
-  lastName,
+  Header,
+  Avatar,
+  ExperienceSection,
+  SkillsSection,
+  EducationSection,
+  InterestsSection,
+} from '../components/pdf/index';
+
+import {
+  name,
+  title,
   address,
   email,
-  aboutParagraphs,
-  socialLinks,
   education,
   experience,
   skills,
-  interestsParagraphs,
+  interestsParagraph,
 } from '../json/json-bundle';
 
 // Create styles
 const styles = StyleSheet.create({
   page: {
-    flexDirection: 'row',
-    backgroundColor: '#E4E4E4',
+    fontSize: 10,
+    padding: 30,
   },
-  leftColumn: {},
-  rightColumn: {},
-  header: {},
-  avatar: {},
-  experience: {},
-  skills: {},
-  education: {},
-  interests: {},
-  footer: {},
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  leftColumn: { flexDirection: 'column', width: '70%', paddingRight: 10 },
+  rightColumn: { flexDirection: 'column', width: '30%', paddingLeft: 10 },
 });
 
 const PDF = () => {
@@ -43,17 +46,29 @@ const PDF = () => {
     <Layout isPDF>
       <PDFViewer style={{ height: '100vh', width: '100vw' }}>
         <Document
-          author={`${firstName} ${lastName}`}
-          keywords={`${firstName}, ${lastName}, resume`}
-          subject={`${firstName} ${lastName}'s Resume`}
+          author={name}
+          keywords={`${name}, resume`}
+          subject={`${name}'s Resume`}
           title="Resume"
         >
           <Page size="A4" style={styles.page}>
-            <View>
-              <Text>Section #1</Text>
-            </View>
-            <View>
-              <Text>Section #2</Text>
+            <View style={styles.container}>
+              <View style={styles.leftColumn}>
+                <Header
+                  name={name}
+                  title={title}
+                  email={email}
+                  address={address}
+                />
+                <ExperienceSection experience={experience} />
+              </View>
+
+              <View style={styles.rightColumn}>
+                <Avatar />
+                <SkillsSection skills={skills} />
+                <EducationSection education={education} />
+                <InterestsSection text={interestsParagraph} />
+              </View>
             </View>
           </Page>
         </Document>
