@@ -102,7 +102,7 @@ export class Sidebar extends Component {
               >
                 {({ blob, url, loading, error }) =>
                   loading ? (
-                    <i class="fas fa-spinner spinner rotate"></i>
+                    <i className="fas fa-spinner spinner rotate"></i>
                   ) : (
                     'Download Resume'
                   )
