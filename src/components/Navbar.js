@@ -85,6 +85,12 @@ export class Sidebar extends Component {
             })}
 
             <SocialLinks className="social-links--nav" links={socialLinks} />
+            <a
+              className="btn btn-primary btn-sm download-resume-button"
+              href="/pdf"
+            >
+              Download Resume
+            </a>
           </Scrollspy>
         </div>
       </nav>

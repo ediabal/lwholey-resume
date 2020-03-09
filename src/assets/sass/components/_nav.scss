@@ -17,6 +17,11 @@
     }
   }
 
+  .download-resume-button {
+    align-self: center;
+    width: 10rem;
+  }
+
   @media (min-width: $lg-page-min-width) {
     display: flex;
     flex-direction: column;
