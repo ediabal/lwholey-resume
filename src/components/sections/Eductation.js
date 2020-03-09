@@ -1,8 +1,10 @@
 import React from 'react';
-import LinkPreview from '../components/LinkPreview';
-import { toKebabCase } from '../utils';
 
-const EducationSectionItem = ({ title, degree, gpa, dates, url }) => (
+import { toKebabCase } from '../../utils';
+
+import LinkPreview from '../LinkPreview';
+
+const EducationItem = ({ title, degree, gpa, dates, url }) => (
   <div className="education-section-item">
     <div className="education-section-item__content">
       <LinkPreview url={url} placement="top-start">
@@ -16,16 +18,16 @@ const EducationSectionItem = ({ title, degree, gpa, dates, url }) => (
   </div>
 );
 
-const EducationSection = ({ education = [] }) => (
+const Education = ({ education = [] }) => (
   <section id="education" className="education-section">
     <div className="education-section__content">
       <h2 className="education-section__header">Education</h2>
 
       {education.map(edu => (
-        <EducationSectionItem key={toKebabCase(edu.title)} {...edu} />
+        <EducationItem key={toKebabCase(edu.title)} {...edu} />
       ))}
     </div>
   </section>
 );
 
-export default EducationSection;
+export default Education;

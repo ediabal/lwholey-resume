@@ -1,4 +1,6 @@
 #side-nav {
+  text-align: center;
+
   .nav-link {
     font-weight: 800;
     letter-spacing: 0.05rem;
@@ -15,11 +17,19 @@
     }
   }
 
+  .download-resume-button {
+    align-self: center;
+    width: 10rem;
+
+    .spinner {
+      color: $white;
+    }
+  }
+
   @media (min-width: $lg-page-min-width) {
     display: flex;
     flex-direction: column;
     position: fixed;
-    text-align: center;
     top: 0;
     left: 0;
     width: $sidebar-base-width;

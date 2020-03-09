@@ -3,44 +3,78 @@
     {
       "name": "JavaScript",
       "icon": "js-square",
-      "link": "https://eloquentjavascript.net/"
+      "link": "https://eloquentjavascript.net/",
+      "resume": true
     },
-    { "name": "React.js", "icon": "react", "link": "https://reactjs.org/" },
+    {
+      "name": "React.js",
+      "icon": "react",
+      "link": "https://reactjs.org/",
+      "resume": true
+    },
     {
       "name": "HTML",
       "icon": "html5",
-      "link": "https://www.w3schools.com/html/default.asp"
+      "link": "https://www.w3schools.com/html/default.asp",
+      "resume": true
     },
     {
       "name": "CSS",
       "icon": "css3-alt",
-      "link": "https://www.w3schools.com/css/default.asp"
+      "link": "https://www.w3schools.com/css/default.asp",
+      "resume": true
     },
-    { "name": "SASS", "icon": "sass", "link": "https://sass-lang.com/" },
-    { "name": "Storybook", "link": "https://storybook.js.org/" },
-    { "name": "Web Components", "link": "https://www.webcomponents.org/" },
-    { "name": "Stencil", "link": "https://stenciljs.com/" },
+    {
+      "name": "SASS",
+      "icon": "sass",
+      "link": "https://sass-lang.com/",
+      "resume": true
+    },
+    {
+      "name": "Storybook",
+      "link": "https://storybook.js.org/",
+      "resume": true
+    },
+    {
+      "name": "Web Components",
+      "link": "https://www.webcomponents.org/",
+      "resume": true
+    },
+    { "name": "StencilJS", "link": "https://stenciljs.com/", "resume": true },
     { "name": "lit-html", "link": "https://lit-html.polymer-project.org/" },
     { "name": "Python", "icon": "python", "link": "https://www.python.org/" },
     { "name": "Ruby", "link": "https://www.ruby-lang.org/en/" },
     {
       "name": "Ruby on Rails",
-      "link": "https://guides.rubyonrails.org/index.html"
+      "link": "https://guides.rubyonrails.org/index.html",
+      "resume": true
     },
-    { "name": "GraphQL", "link": "https://graphql.org/" },
+    { "name": "GraphQL", "link": "https://graphql.org/", "resume": true },
     { "name": "nodejs", "icon": "node-js", "link": "https://nodejs.org/en/" },
     { "name": "npm", "icon": "npm", "link": "https://www.npmjs.com/" },
-    { "name": "yarn", "icon": "yarn", "link": "https://yarnpkg.com/" },
-    { "name": "Lerna", "link": "https://lerna.js.org/" },
-    { "name": "Docker", "icon": "docker", "link": "https://www.docker.com/" },
+    {
+      "name": "yarn",
+      "icon": "yarn",
+      "link": "https://yarnpkg.com/",
+      "resume": true
+    },
+    { "name": "Lerna", "link": "https://lerna.js.org/", "resume": true },
+    {
+      "name": "Docker",
+      "icon": "docker",
+      "link": "https://www.docker.com/",
+      "resume": true
+    },
     {
       "name": "GitHub",
       "icon": "github",
-      "link": "https://github.com/ediabal"
+      "link": "https://github.com/ediabal",
+      "resume": true
     },
     {
       "name": "Scrum & Kanban",
-      "link": "https://www.atlassian.com/agile/kanban"
+      "link": "https://www.atlassian.com/agile/kanban",
+      "resume": true
     }
   ]
 }

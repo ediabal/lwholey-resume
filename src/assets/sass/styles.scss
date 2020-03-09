@@ -1,11 +1,11 @@
 @import './vendor/bootstrap/bootstrap.min.css';
 
 @import './variables';
+@import './animations';
 @import './mixins';
 @import './global';
 @import './components/styles';
 @import './pages/styles';
-@import './sections/styles';
 
 @import './overrides/bootstrap-overrides';
 @import './vendor/fontawesome/css/all.min.css';

@@ -1,5 +1,6 @@
 import React from 'react';
-import LinkPreview from '../components/LinkPreview';
+
+import LinkPreview from '../LinkPreview';
 
 const SkillIcon = ({ skill, link }) => (
   <li className="skills-section__icons__icon">
@@ -32,7 +33,7 @@ const SkillsList = ({ skills = [] }) => (
   </ul>
 );
 
-const SkillsSection = ({ skills = [] }) => {
+const Skills = ({ skills = [] }) => {
   const skillIcons = skills.filter(({ icon = null }) => icon != null);
 
   return (
@@ -52,4 +53,4 @@ const SkillsSection = ({ skills = [] }) => {
   );
 };
 
-export default SkillsSection;
+export default Skills;

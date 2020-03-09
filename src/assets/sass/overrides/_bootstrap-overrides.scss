@@ -2,6 +2,18 @@
   background-color: $primary !important;
 }
 
+.btn-primary {
+  background-color: fade-out($white, 0.8) !important;
+  border-color: fade-out($white, 0.8) !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: fade-out($white, 0.6) !important;
+    border-color: fade-out($white, 0.6) !important;
+  }
+}
+
 a {
   color: $primary;
 

@@ -11,6 +11,7 @@
     "email": "logan.wholey@gmail.com"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^1.6.8",
     "@tippy.js/react": "^3.1.1",
     "gatsby": "^2.4.3",
     "gatsby-plugin-manifest": "^2.1.1",

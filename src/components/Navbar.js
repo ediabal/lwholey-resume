@@ -2,14 +2,19 @@
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 
 import React, { Component } from 'react';
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import Scrollspy from 'react-scrollspy';
+
 import Scroll from './Scroll';
+import SocialLinks from './SocialLinks';
+import MyResume from './pdf/MyResume';
 
 import avatar from '../assets/images/avatar.png';
-import config from '../../config';
+
+import { name, socialLinks } from '../json/json-bundle';
 
 export class Sidebar extends Component {
-  state = { collapsed: true };
+  state = { collapsed: true, isResumePrepared: false };
 
   tabs = [
     { content: 'About', href: 'about' },
@@ -23,8 +28,12 @@ export class Sidebar extends Component {
     this.setState({ collapsed: !this.state.collapsed });
   };
 
+  componentDidMount() {
+    this.setState({ isResumePrepared: true });
+  }
+
   render() {
-    const { collapsed } = this.state;
+    const { collapsed, isResumePrepared } = this.state;
 
     const navbarContentClass = collapsed
       ? 'collapse navbar-collapse'
@@ -39,9 +48,7 @@ export class Sidebar extends Component {
         className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       >
         <a className="navbar-brand" href="#about">
-          <span className="d-block d-lg-none">
-            {config.firstName} {config.lastName}
-          </span>
+          <span className="d-block d-lg-none">{name}</span>
           <span className="d-none d-lg-block">
             <img
               className="img-fluid img-profile rounded-circle mx-auto mb-2"
@@ -84,9 +91,24 @@ export class Sidebar extends Component {
                 </li>
               );
             })}
-            <a className="nav-link" href={`mailto:${config.email}`}>
-              Contact
-            </a>
+
+            <SocialLinks className="social-links--nav" links={socialLinks} />
+
+            {isResumePrepared && (
+              <PDFDownloadLink
+                className="btn btn-primary btn-sm download-resume-button"
+                document={<MyResume />}
+                fileName="resume.pdf"
+              >
+                {({ blob, url, loading, error }) =>
+                  loading ? (
+                    <i class="fas fa-spinner spinner rotate"></i>
+                  ) : (
+                    'Download Resume'
+                  )
+                }
+              </PDFDownloadLink>
+            )}
           </Scrollspy>
         </div>
       </nav>

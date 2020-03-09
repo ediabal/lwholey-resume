@@ -1,10 +1,20 @@
 import React from 'react';
 
+import Layout from '../components/Layout';
+import Navbar from '../components/Navbar';
+import {
+  About,
+  Education,
+  Experience,
+  Interests,
+  Skills,
+} from '../components/sections/index';
+
 import {
   firstName,
   lastName,
+  title,
   address,
-  email,
   aboutParagraphs,
   socialLinks,
   education,
@@ -13,43 +23,34 @@ import {
   interestsParagraphs,
 } from '../json/json-bundle';
 
-import Layout from '../components/Layout';
-import Navbar from '../components/Navbar';
-
-import AboutSection from '../sections/about';
-import ExperienceSection from '../sections/experience';
-import SkillsSection from '../sections/skills';
-import EducationSection from '../sections/eductation';
-import InterestsSection from '../sections/interests';
-
 const IndexPage = () => (
   <Layout>
     <Navbar />
     <div className="index-page">
-      <AboutSection
+      <About
         firstName={firstName}
         lastName={lastName}
+        title={title}
         address={address}
-        email={email}
         socialLinks={socialLinks}
         paragraphs={aboutParagraphs}
       />
 
       <hr className="index-page__hr" />
 
-      <ExperienceSection experience={experience} />
+      <Experience experience={experience} />
 
       <hr className="index-page__hr" />
 
-      <SkillsSection skills={skills} />
+      <Skills skills={skills} />
 
       <hr className="index-page__hr" />
 
-      <EducationSection education={education} />
+      <Education education={education} />
 
       <hr className="index-page__hr" />
 
-      <InterestsSection paragraphs={interestsParagraphs} />
+      <Interests paragraphs={interestsParagraphs} />
     </div>
   </Layout>
 );

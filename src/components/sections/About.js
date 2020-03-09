@@ -1,10 +1,12 @@
 import React from 'react';
 
-const AboutSection = ({
+import SocialLinks from '../SocialLinks';
+
+const About = ({
   firstName,
   lastName,
+  title,
   address,
-  email,
   socialLinks = [],
   paragraphs = [],
 }) => {
@@ -16,26 +18,18 @@ const AboutSection = ({
           <span className="about-section__header--primary">{lastName}</span>
         </h1>
         <div className="about-section__subheader">
-          {address} · <a href={`mailto:${email}`}>{email}</a>
+          <div className="about-section__subheader--first">{title}</div>
+          <div className="about-section__subheader--second">{address}</div>
         </div>
 
         {paragraphs.map((paragraph, i) => (
           <p key={`clp-${i}`}>{paragraph}</p>
         ))}
 
-        <div className="social-icons">
-          {socialLinks.map(social => {
-            const { icon, url } = social;
-            return (
-              <a key={url} href={url} target="_blank" rel="noopener noreferrer">
-                <i className={`fab ${icon}`}></i>
-              </a>
-            );
-          })}
-        </div>
+        <SocialLinks links={socialLinks} />
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default About;
