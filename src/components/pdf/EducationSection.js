@@ -7,13 +7,22 @@ const styles = StyleSheet.create({
     fontSize: 10,
   },
   educationItem: {
-    marginBottom: 10,
-  },
-  title: {},
-  degree: {
     marginBottom: 5,
   },
-  dates: {},
+  title: {
+    fontSize: 12,
+    fontFamily: 'Saira Extra Condensed',
+    fontWeight: 800,
+    color: '#495057',
+  },
+  degree: {
+    fontFamily: 'Saira Extra Condensed',
+    marginBottom: 2.5,
+  },
+  dates: {
+    fontFamily: 'Saira Extra Condensed',
+    color: '#495057',
+  },
 });
 
 const EducationSection = ({ education = [] }) => (

@@ -9,7 +9,12 @@ const styles = StyleSheet.create({
     width: 150,
     marginBottom: 5,
   },
-  image: { height: 150, width: 150 },
+  image: {
+    height: 150,
+    width: 150,
+    border: '3 solid #3a79c1',
+    borderRadius: 100,
+  },
 });
 
 const Avatar = () => (

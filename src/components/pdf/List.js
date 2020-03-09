@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Image, Text, View, StyleSheet } from '@react-pdf/renderer';
+
+import checkmark from '../../assets/images/check-mark.png';
 
 const styles = StyleSheet.create({
   list: {
@@ -8,9 +10,13 @@ const styles = StyleSheet.create({
   listItem: {
     flexDirection: 'row',
     marginTop: 5,
+    alignItems: 'center',
   },
   bullet: {
-    width: 10,
+    width: 15,
+    height: 15,
+    color: '#28a745',
+    margin: '0 5',
   },
   item: {
     flex: 1,
@@ -21,7 +27,7 @@ const List = ({ list = [] }) => (
   <View style={styles.list}>
     {list.map(item => (
       <View style={styles.listItem}>
-        <Text style={styles.bullet}>-</Text>
+        <Image src={checkmark} style={styles.bullet} />
         <Text style={styles.item}>{item}</Text>
       </View>
     ))}

@@ -2,11 +2,9 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 5,
-    marginTop: 5,
-  },
+  container: {},
   text: {
+    fontFamily: 'Saira Extra Condensed',
     fontSize: 12,
     fontWeight: 800,
     color: '#3a79c1',

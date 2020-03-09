@@ -9,26 +9,29 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   titleContainer: {
-    marginBottom: 5,
+    fontFamily: 'Saira Extra Condensed',
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'space-between',
+    fontWeight: 800,
+    color: '#495057',
+    marginBottom: 2.5,
   },
   title: {
+    fontFamily: 'Saira Extra Condensed',
     fontSize: 12,
     fontWeight: 800,
-    marginBottom: 5,
   },
-  subtitleContainer: {
-    flexDirection: 'row',
-    fontWeight: 800,
-    justifyContent: 'space-between',
+  subtitle: {
+    fontSize: 12,
   },
-  subtitle: {},
   dates: {
     textTransform: 'uppercase',
     alignItems: 'flex-end',
     justifySelf: 'flex-end',
   },
   contentContainer: {
-    marginBottom: 5,
+    marginBottom: 2.5,
   },
   content: {
     textAlign: 'justify',
@@ -43,11 +46,10 @@ const ExperienceSection = ({ experience = [] }) => (
     {experience.map(({ title, subtitle, dates, content, details = [] }) => (
       <View style={styles.experienceItem}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>{title}</Text>
-          <View style={styles.subtitleContainer}>
-            <Text style={styles.subtitle}>{subtitle}</Text>
-            <Text style={styles.dates}>{dates}</Text>
-          </View>
+          <Text style={styles.title}>
+            {title} @ {subtitle}
+          </Text>
+          <Text style={styles.dates}>{dates}</Text>
         </View>
 
         <View style={styles.contentContainer}>

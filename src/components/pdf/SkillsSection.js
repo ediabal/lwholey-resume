@@ -4,7 +4,10 @@ import SectionHeader from './SectionHeader';
 import List from './List';
 
 const styles = StyleSheet.create({
-  container: { fontSize: 10 },
+  container: {
+    fontSize: 10,
+    marginBottom: 5,
+  },
   skills: {},
 });
 
@@ -13,7 +16,11 @@ const SkillsSection = ({ skills = [] }) => (
     <SectionHeader text="Skills & Proficiencies" />
 
     <View style={styles.skills}>
-      <List list={skills.map(({ name }) => name)} />
+      <List
+        list={skills
+          .filter(({ resume = false }) => resume === true)
+          .map(({ name }) => name)}
+      />
     </View>
   </View>
 );
