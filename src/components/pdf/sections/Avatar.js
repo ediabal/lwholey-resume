@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, View, StyleSheet } from '@react-pdf/renderer';
 
-import avatar from '../../assets/images/avatar.png';
+import avatar from '../../../assets/images/avatar.png';
 
 const styles = StyleSheet.create({
   container: {

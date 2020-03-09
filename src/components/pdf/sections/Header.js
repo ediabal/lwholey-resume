@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Header = ({ name, title, email, address }) => (
+const HeaderSection = ({ name, title, email, address }) => (
   <View style={styles.container}>
     <Text style={styles.name}>{name}</Text>
     <Text style={styles.title}>{title}</Text>
@@ -43,4 +43,4 @@ const Header = ({ name, title, email, address }) => (
   </View>
 );
 
-export default Header;
+export default HeaderSection;

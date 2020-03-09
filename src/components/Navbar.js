@@ -2,15 +2,19 @@
 /* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 
 import React, { Component } from 'react';
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import Scrollspy from 'react-scrollspy';
+
 import Scroll from './Scroll';
 import SocialLinks from './SocialLinks';
+import MyResume from './pdf/MyResume';
 
 import avatar from '../assets/images/avatar.png';
+
 import { name, socialLinks } from '../json/json-bundle';
 
 export class Sidebar extends Component {
-  state = { collapsed: true };
+  state = { collapsed: true, isResumePrepared: false };
 
   tabs = [
     { content: 'About', href: 'about' },
@@ -24,8 +28,12 @@ export class Sidebar extends Component {
     this.setState({ collapsed: !this.state.collapsed });
   };
 
+  componentDidMount() {
+    this.setState({ isResumePrepared: true });
+  }
+
   render() {
-    const { collapsed } = this.state;
+    const { collapsed, isResumePrepared } = this.state;
 
     const navbarContentClass = collapsed
       ? 'collapse navbar-collapse'
@@ -85,12 +93,22 @@ export class Sidebar extends Component {
             })}
 
             <SocialLinks className="social-links--nav" links={socialLinks} />
-            <a
-              className="btn btn-primary btn-sm download-resume-button"
-              href="/pdf"
-            >
-              Download Resume
-            </a>
+
+            {isResumePrepared && (
+              <PDFDownloadLink
+                className="btn btn-primary btn-sm download-resume-button"
+                document={<MyResume />}
+                fileName="resume.pdf"
+              >
+                {({ blob, url, loading, error }) =>
+                  loading ? (
+                    <i class="fas fa-spinner spinner rotate"></i>
+                  ) : (
+                    'Download Resume'
+                  )
+                }
+              </PDFDownloadLink>
+            )}
           </Scrollspy>
         </div>
       </nav>

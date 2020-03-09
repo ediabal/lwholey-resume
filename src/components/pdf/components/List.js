@@ -1,7 +1,9 @@
 import React from 'react';
 import { Image, Text, View, StyleSheet } from '@react-pdf/renderer';
 
-import checkmark from '../../assets/images/check-mark.png';
+import { toKebabCase } from '../../../utils';
+
+import checkmark from '../../../assets/images/check-mark.png';
 
 const styles = StyleSheet.create({
   list: {
@@ -25,8 +27,8 @@ const styles = StyleSheet.create({
 
 const List = ({ list = [] }) => (
   <View style={styles.list}>
-    {list.map(item => (
-      <View style={styles.listItem}>
+    {list.map((item, i) => (
+      <View key={`${toKebabCase(item)}-${i}`} style={styles.listItem}>
         <Image src={checkmark} style={styles.bullet} />
         <Text style={styles.item}>{item}</Text>
       </View>

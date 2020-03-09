@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from '@react-pdf/renderer';
-import SectionHeader from './SectionHeader';
-import List from './List';
+
+import { SectionHeader, List } from '../components/index';
 
 const styles = StyleSheet.create({
   container: {

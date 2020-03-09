@@ -1,7 +1,8 @@
 import React from 'react';
+
 import SocialLinks from '../SocialLinks';
 
-const AboutSection = ({
+const About = ({
   firstName,
   lastName,
   title,
@@ -31,4 +32,4 @@ const AboutSection = ({
   );
 };
 
-export default AboutSection;
+export default About;

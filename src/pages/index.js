@@ -1,11 +1,15 @@
 import React from 'react';
+
 import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
-import AboutSection from '../components/sections/AboutSection';
-import ExperienceSection from '../components/sections/ExperienceSection';
-import SkillsSection from '../components/sections/SkillsSection';
-import EducationSection from '../components/sections/EductationSection';
-import InterestsSection from '../components/sections/InterestsSection';
+import {
+  About,
+  Education,
+  Experience,
+  Interests,
+  Skills,
+} from '../components/sections/index';
+
 import {
   firstName,
   lastName,
@@ -23,7 +27,7 @@ const IndexPage = () => (
   <Layout>
     <Navbar />
     <div className="index-page">
-      <AboutSection
+      <About
         firstName={firstName}
         lastName={lastName}
         title={title}
@@ -34,19 +38,19 @@ const IndexPage = () => (
 
       <hr className="index-page__hr" />
 
-      <ExperienceSection experience={experience} />
+      <Experience experience={experience} />
 
       <hr className="index-page__hr" />
 
-      <SkillsSection skills={skills} />
+      <Skills skills={skills} />
 
       <hr className="index-page__hr" />
 
-      <EducationSection education={education} />
+      <Education education={education} />
 
       <hr className="index-page__hr" />
 
-      <InterestsSection paragraphs={interestsParagraphs} />
+      <Interests paragraphs={interestsParagraphs} />
     </div>
   </Layout>
 );

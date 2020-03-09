@@ -20,6 +20,10 @@
   .download-resume-button {
     align-self: center;
     width: 10rem;
+
+    .spinner {
+      color: $white;
+    }
   }
 
   @media (min-width: $lg-page-min-width) {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InterestsSection = ({ paragraphs = [] }) => (
+const Interests = ({ paragraphs = [] }) => (
   <section id="interests" className="interests-section">
     <div className="interests-section__content">
       <h2 className="interests-section__header">Interests</h2>
@@ -11,4 +11,4 @@ const InterestsSection = ({ paragraphs = [] }) => (
   </section>
 );
 
-export default InterestsSection;
+export default Interests;

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
-import SectionHeader from './SectionHeader';
+
+import { toKebabCase } from '../../../utils';
+
+import { SectionHeader } from '../components/index';
 
 const styles = StyleSheet.create({
   container: {
@@ -28,8 +31,8 @@ const styles = StyleSheet.create({
 const EducationSection = ({ education = [] }) => (
   <View style={styles.container}>
     <SectionHeader text="Education" />
-    {education.map(({ title, abbrDegree, gpa, abbrDates }) => (
-      <View style={styles.educationItem}>
+    {education.map(({ title, abbrDegree, gpa, abbrDates }, i) => (
+      <View key={`${toKebabCase(title)}-${i}`} style={styles.educationItem}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.degree}>{abbrDegree}</Text>
         <Text style={styles.dates}>

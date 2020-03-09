@@ -1,7 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
-import SectionHeader from './SectionHeader';
-import List from './List';
+
+import { toKebabCase } from '../../../utils';
+
+import { SectionHeader, List } from '../components/index';
 
 const styles = StyleSheet.create({
   container: {},
@@ -39,12 +41,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const ExperienceSection = ({ experience = [] }) => (
+const Experience = ({ experience = [] }) => (
   <View style={styles.container}>
     <SectionHeader text="Experience" />
 
-    {experience.map(({ title, subtitle, dates, content, details = [] }) => (
-      <View style={styles.experienceItem}>
+    {experience.map(({ title, subtitle, dates, content, details = [] }, i) => (
+      <View key={`${toKebabCase(title)}-${i}`} style={styles.experienceItem}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>
             {title} @ {subtitle}
@@ -62,4 +64,4 @@ const ExperienceSection = ({ experience = [] }) => (
   </View>
 );
 
-export default ExperienceSection;
+export default Experience;

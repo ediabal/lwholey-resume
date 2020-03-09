@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
-import SectionHeader from './SectionHeader';
+
+import { SectionHeader } from '../components/index';
 
 const styles = StyleSheet.create({
   container: { fontSize: 10 },
