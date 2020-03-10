@@ -1,0 +1,14 @@
+.pdf-page {
+  background-color: $primary;
+
+  .pdf-view {
+  }
+
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    color: $white;
+  }
+}
