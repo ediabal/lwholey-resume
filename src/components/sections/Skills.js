@@ -1,12 +1,10 @@
 import React from 'react';
 
-import LinkPreview from '../LinkPreview';
-
 const SkillIcon = ({ skill, link }) => (
   <li className="skills-section__icons__icon">
-    <LinkPreview url={link}>
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <i className={`fab fa-${skill}`}></i>
-    </LinkPreview>
+    </a>
   </li>
 );
 
@@ -21,7 +19,9 @@ const SkillIconsList = ({ skillIcons = [] }) => (
 const SkillListItem = ({ skill, link }) => (
   <li className="skills-section__list__item">
     <i className="fa fa-check"></i>&nbsp;
-    <LinkPreview url={link}>{skill}</LinkPreview>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      {skill}
+    </a>
   </li>
 );
 

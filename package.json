@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@react-pdf/renderer": "^1.6.8",
-    "@tippy.js/react": "^3.1.1",
     "gatsby": "^2.4.3",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.0",
@@ -24,7 +23,6 @@
     "react-helmet": "^5.2.1",
     "react-images": "^0.5.19",
     "react-scrollspy": "^3.4.0",
-    "react-tiny-link": "^3.2.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {

@@ -12,7 +12,7 @@ class PDF extends Component {
     this.setState({ loading: false });
   }
 
-  renderSpinner = () => <i class="fas fa-spinner spinner rotate"></i>;
+  renderSpinner = () => <i className="fas fa-spinner spinner rotate"></i>;
 
   renderPDFViewer = () => (
     <div className="pdf-view">
