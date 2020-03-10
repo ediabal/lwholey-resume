@@ -13,11 +13,21 @@ Clone the repo then:
 ```sh
 cd lwholey-resume
 yarn install
-gatsby develop
+yarn develop
 ```
 
 ### Deploying
 
-`package.json` has a default script that uses `gh-pages` module to publish on Github pages. Simply running `yarn deploy` would publish the site on github pages.
+This project deploys by publishing to Github pages.
 
-Additionally, it also has [path-prefix](https://www.gatsbyjs.org/docs/path-prefix/) value set for gatsby config in `config.js`. Change `pathPrefix` to relevant path if your gatsby site is hosted on subpath of a domain, `https://example.com/somePath/`. If you are hosting it as root site, i.e, `https://example.com/` , remove the pathPrefix configuration.
+To deploy, make sure you're in master and have the latest, then:
+
+```sh
+yarn build
+yarn serve # checkout http://localhost:9000/ and make sure everything is in order
+yarn deploy
+```
+
+### Updating static resume PDF
+
+To update the static resume PDF file navigate to `/pdf` and download a fresh copy of the resume to `assets/pdf` and make sure it is named `resume.pdf`.
