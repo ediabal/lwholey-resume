@@ -8,6 +8,7 @@ import Scroll from './Scroll';
 import SocialLinks from './SocialLinks';
 
 import avatar from '../assets/images/avatar.png';
+import resumePDF from '../assets/pdf/resume.pdf';
 
 import { name, socialLinks } from '../json/json-bundle';
 
@@ -90,9 +91,8 @@ export class Sidebar extends Component {
 
             <a
               className="btn btn-primary btn-sm download-resume-button"
-              href="/pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={resumePDF}
+              download="resume"
             >
               Download Resume
             </a>
