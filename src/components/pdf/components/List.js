@@ -18,10 +18,11 @@ const styles = StyleSheet.create({
     width: 15,
     height: 15,
     color: '#28a745',
-    margin: '0 5',
+    marginRight: 5,
   },
   item: {
     flex: 1,
+    marginRight: 10,
   },
 });
 
