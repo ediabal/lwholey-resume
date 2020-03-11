@@ -4,6 +4,21 @@
 
 .experience-section-item {
   @include resume-section-item;
+
+  .header-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    @media (min-width: $md-page-min-width) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__subheader {
+    margin-bottom: 0;
+  }
 }
 
 .experience-section-item-details-list {
