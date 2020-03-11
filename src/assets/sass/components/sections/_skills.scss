@@ -2,13 +2,14 @@
   @include resume-section-layout;
 
   &__icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     padding-left: 0;
     list-style: none;
     font-size: 3rem;
 
     &__icon {
-      display: inline-block;
-
       &:not(:last-child) {
         margin-right: 0.5rem;
       }

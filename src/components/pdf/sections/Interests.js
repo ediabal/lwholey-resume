@@ -5,7 +5,9 @@ import { SectionHeader } from '../components/index';
 
 const styles = StyleSheet.create({
   container: { fontSize: 10 },
-  interests: {},
+  interests: {
+    textAlign: 'justify',
+  },
 });
 
 const InterestsSection = ({ text }) => (

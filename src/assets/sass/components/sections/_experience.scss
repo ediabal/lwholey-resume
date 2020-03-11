@@ -7,9 +7,11 @@
 }
 
 .experience-section-item-details-list {
-  &__list__item {
-    .fa {
-      color: $green;
+  &__list {
+    &__item {
+      .fa {
+        color: $green;
+      }
     }
   }
 }
