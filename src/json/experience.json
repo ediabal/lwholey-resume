@@ -1,11 +1,11 @@
 {
   "experience": [
     {
-      "title": "Senior UX Engineer",
+      "title": "Staff UX Engineer",
       "subtitle": "FireEye, Inc. - Remote",
-      "content": "Core developer on the FireEye UX team currently working on the FireEye Design System, Muse. Muse serves as the source of styled patterns and components for all FireEye's internal and public web applications. The project utilizes web components that are portable to both React and Angular projects as well as supported in almost all major browsers.",
+      "content": "Technical lead & developer on the FireEye UX team for the FireEye Design System (Muse) and supporting systems/adopters. Muse serves as the source of styled patterns and components for all FireEye's internal and public web applications. The project utilizes web components that are portable to both React and Angular projects as well as supported in almost all major browsers.",
       "details": [
-        "Researching, prototyping, creating, driving, and supporting project design and architectural decisions.",
+        "Researching, prototyping and delivering project design and architectural decisions.",
         "Developing reusable web components as well as design patterns for the foundation of the Muse monorepo project.",
         "Collaborating with other teams to gain insight into future requirements and contributions for further adoption of the Muse Design System."
       ],
@@ -18,7 +18,7 @@
       "details": [
         "Drove and supported project design and architectural decisions.",
         "Provided ongoing maintenance and feature development utilizing Ruby on Rails, React.js, and other supporting tech such as Redux, GraphQL, Elastic Search, and Docker.",
-        "Onboarded and mentored new coworkers and bringing others up to speed on adopted tech.",
+        "Onboard and mentored new coworkers and bringing others up to speed on adopted tech.",
         "Supported and improved upon the deployment of our applications."
       ],
       "dates": "JUN 2015 - AUG 2019"
